@@ -1,0 +1,30 @@
+[
+  {
+    "year": 2016,
+    "title": "Web Developer Intern",
+    "description": "Looking for a rockstar to build websites using jQuery and PHP. Must know Photoshop.",
+    "skills": ["jQuery", "PHP", "HTML/CSS", "Photoshop"],
+    "popularity": 40
+  },
+  {
+    "year": 2019,
+    "title": "Frontend React Developer",
+    "description": "Join our startup! We need someone who understands React class components and Redux.",
+    "skills": ["React", "Redux", "SASS", "Webpack"],
+    "popularity": 65
+  },
+  {
+    "year": 2022,
+    "title": "Full Stack Engineer",
+    "description": "Remote role. TypeScript and Node.js required. Experience with AWS is a plus.",
+    "skills": ["TypeScript", "Node.js", "AWS", "React Hooks"],
+    "popularity": 80
+  },
+  {
+    "year": 2026,
+    "title": "AI Interface Engineer",
+    "description": "Build the UI for our LLM agents. Must know Prompt Engineering and Vercel AI SDK.",
+    "skills": ["Next.js", "AI SDK", "Tailwind", "Python"],
+    "popularity": 95
+  }
+]

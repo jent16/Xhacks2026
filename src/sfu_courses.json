@@ -1,0 +1,30 @@
+[
+  {
+    "year": 2016,
+    "courses": [
+      { "code": "CMPT 165", "title": "Intro to the Web", "topics": ["HTML/CSS", "jQuery"] },
+      { "code": "CMPT 470", "title": "Web Systems", "topics": ["PHP", "SQL", "HTML/CSS"] },
+      { "code": "IAT 339", "title": "Web Design", "topics": ["Photoshop", "HTML/CSS"] }
+    ]
+  },
+  {
+    "year": 2019,
+    "courses": [
+      { "code": "CMPT 276", "title": "Intro to Software Engineering", "topics": ["Java", "Android"] },
+      { "code": "CMPT 373", "title": "Software Development Methods", "topics": ["Refactoring", "Testing"] }
+    ]
+  },
+  {
+    "year": 2022,
+    "courses": [
+      { "code": "CMPT 383", "title": "Comparative Programming", "topics": ["Haskell", "Scala"] },
+      { "code": "CMPT 474", "title": "Web Systems II", "topics": ["Node.js", "React Hooks"] }
+    ]
+  },
+  {
+    "year": 2026,
+    "courses": [
+      { "code": "CMPT 419", "title": "Special Topics: AI", "topics": ["Python", "Machine Learning"] }
+    ]
+  }
+]
