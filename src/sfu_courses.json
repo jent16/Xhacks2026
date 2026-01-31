@@ -1,30 +1,13 @@
 [
-  {
-    "year": 2016,
-    "courses": [
-      { "code": "CMPT 165", "title": "Intro to the Web", "topics": ["HTML/CSS", "jQuery"] },
-      { "code": "CMPT 470", "title": "Web Systems", "topics": ["PHP", "SQL", "HTML/CSS"] },
-      { "code": "IAT 339", "title": "Web Design", "topics": ["Photoshop", "HTML/CSS"] }
-    ]
-  },
-  {
-    "year": 2019,
-    "courses": [
-      { "code": "CMPT 276", "title": "Intro to Software Engineering", "topics": ["Java", "Android"] },
-      { "code": "CMPT 373", "title": "Software Development Methods", "topics": ["Refactoring", "Testing"] }
-    ]
-  },
-  {
-    "year": 2022,
-    "courses": [
-      { "code": "CMPT 383", "title": "Comparative Programming", "topics": ["Haskell", "Scala"] },
-      { "code": "CMPT 474", "title": "Web Systems II", "topics": ["Node.js", "React Hooks"] }
-    ]
-  },
-  {
-    "year": 2026,
-    "courses": [
-      { "code": "CMPT 419", "title": "Special Topics: AI", "topics": ["Python", "Machine Learning"] }
-    ]
-  }
+  { "year": 2016, "courses": [ { "code": "CMPT 165", "title": "Intro to Web", "topics": ["HTML5", "CSS3", "JavaScript"] }, { "code": "CMPT 470", "title": "Web Systems", "topics": ["PHP", "SQL", "jQuery"] } ] },
+  { "year": 2017, "courses": [ { "code": "CMPT 225", "title": "Data Structures", "topics": ["Java", "C++", "Algorithms"] }, { "code": "IAT 235", "title": "Information Design", "topics": ["Photoshop", "UI Design"] } ] },
+  { "year": 2018, "courses": [ { "code": "CMPT 276", "title": "Software Engineering", "topics": ["Java", "Git", "Unit Testing"] }, { "code": "IAT 339", "title": "Web Design II", "topics": ["SASS", "ES6 JavaScript"] } ] },
+  { "year": 2019, "courses": [ { "code": "CMPT 310", "title": "Artificial Intelligence", "topics": ["Logic", "Search", "Python"] }, { "code": "CMPT 354", "title": "Databases", "topics": ["SQL", "MySQL"] } ] },
+  { "year": 2020, "courses": [ { "code": "CMPT 474", "title": "Web Systems II", "topics": ["Node.js", "React Hooks", "NoSQL", "Cloud"] }, { "code": "CMPT 373", "title": "Software Dev", "topics": ["React", "Git", "Agile"] } ] },
+  { "year": 2021, "courses": [ { "code": "CMPT 454", "title": "Database Systems II", "topics": ["MongoDB", "NoSQL", "Indexing"] }, { "code": "CMPT 120", "title": "Intro to CS", "topics": ["Python", "Algorithms"] } ] },
+  { "year": 2022, "courses": [ { "code": "CMPT 383", "title": "Comparative Prog.", "topics": ["Haskell", "Rust", "Go", "TypeScript"] }, { "code": "CMPT 474", "title": "Web Systems II", "topics": ["Next.js", "TypeScript", "React", "Tailwind CSS"] } ] },
+  { "year": 2023, "courses": [ { "code": "CMPT 419", "title": "Special Topics", "topics": ["Python", "Machine Learning", "Stats"] }, { "code": "CMPT 379", "title": "Compilers", "topics": ["Parsing", "Code Generation"] } ] },
+  { "year": 2024, "courses": [ { "code": "CMPT 459", "title": "Data Mining", "topics": ["Clustering", "Python", "Data Modeling"] }, { "code": "CMPT 473", "title": "Software Testing", "topics": ["Jest", "Debugging", "QA"] } ] },
+  { "year": 2025, "courses": [ { "code": "CMPT 419", "title": "Neural Networks", "topics": ["PyTorch", "Python", "Deep Learning"] }, { "code": "CMPT 300", "title": "Operating Systems", "topics": ["C", "Processes"] } ] },
+  { "year": 2026, "courses": [ { "code": "CMPT 419", "title": "Advanced AI", "topics": ["Transformers", "Python", "Neural Networks"] }, { "code": "CMPT 431", "title": "Distributed Systems", "topics": ["Rust", "Concurrency", "Nodes"] } ] }
 ]

@@ -20,14 +20,27 @@ function App() {
   const currentSFU = sfuData.reduce((prev, curr) => 
     Math.abs(curr.year - year) < Math.abs(prev.year - year) ? curr : prev
   );
-
+  console.log("Current Year:", year);
+  console.log("Comparing Job:", currentJob.skills);
+  console.log("Against SFU Data for year:", currentSFU.year, currentSFU);
+  
   // 3. THE LOGIC: Compare Job Skills vs. SFU Topics
   // We check if the skills required by the job exist in ANY SFU course topics for that year
+  // 3. THE LOGIC: Smart Fuzzy Matching
   const missingSkills = currentJob.skills.filter(skill => {
-    // Check if this skill is taught in ANY of the courses
-    const isTaught = currentSFU.courses.some(course => 
-      course.topics.includes(skill)
-    );
+    
+    // Check if this skill is taught in ANY course for this year
+    const isTaught = currentSFU.courses.some(course => {
+      // Check every topic in that course
+      return course.topics.some(topic => {
+        const t = topic.toLowerCase();
+        const s = skill.toLowerCase();
+        
+        // Match if one contains the other (e.g., "React" matches "React Hooks")
+        return t.includes(s) || s.includes(t); 
+      });
+    });
+
     return !isTaught; // If NOT taught, it's a "Missing Skill"
   });
 
