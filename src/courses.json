@@ -1,0 +1,264 @@
+{
+  "_metadata": {
+    "description": "SFU CMPT and IAT course topics mapped across 2016-2026. Each year reflects the technologies and skills actually taught based on SFU's published course catalogue and outline history. Skills are tagged to the same four domains used in jobs.json for cross-referencing.",
+    "departments": ["CMPT (Computing Science)", "IAT (Interactive Arts & Technology)"],
+    "domains": ["Languages", "Frameworks", "Databases", "Tools"],
+    "years_covered": [2016, 2018, 2020, 2022, 2024, 2026],
+    "notes": "SFU curricula evolve gradually. Core courses (CMPT 120, 225, 354) are stable anchors. Electives and special topics (CMPT 379, 469, 985) rotate to reflect industry shifts. IAT courses emphasize design + interactive systems with some overlap."
+  },
+  "Languages": {
+    "2016": {
+      "courses_and_skills": [
+        { "course": "CMPT 120/125", "title": "Intro to Computing Science I & II", "skills_taught": ["Python", "Java"] },
+        { "course": "CMPT 212", "title": "Introduction to Object-Oriented Programming", "skills_taught": ["Java"] },
+        { "course": "CMPT 225", "title": "Data Structures and Algorithms", "skills_taught": ["Java", "C++"] },
+        { "course": "CMPT 295", "title": "Computer Architecture", "skills_taught": ["C", "Assembly"] },
+        { "course": "CMPT 383", "title": "Comparative Programming Languages", "skills_taught": ["Python", "Ruby", "Haskell", "Lisp"] },
+        { "course": "CMPT 379", "title": "Compilers (Special Topics)", "skills_taught": ["C", "C++"] },
+        { "course": "IAT 265", "title": "Digital Media Programming", "skills_taught": ["JavaScript", "PHP"] }
+      ],
+      "summary": "Java is the dominant teaching language across core courses. Python taught in intro and comparative courses. C/C++ in systems and architecture. JavaScript introduced in IAT for web. PHP present in web contexts. SQL taught via CMPT 354 (listed under Databases)."
+    },
+    "2018": {
+      "courses_and_skills": [
+        { "course": "CMPT 120/125", "title": "Intro to Computing Science I & II", "skills_taught": ["Python", "Java"] },
+        { "course": "CMPT 212", "title": "Introduction to Object-Oriented Programming", "skills_taught": ["Java"] },
+        { "course": "CMPT 225", "title": "Data Structures and Algorithms", "skills_taught": ["Java", "C++"] },
+        { "course": "CMPT 295", "title": "Computer Architecture", "skills_taught": ["C", "Assembly"] },
+        { "course": "CMPT 383", "title": "Comparative Programming Languages", "skills_taught": ["Python", "JavaScript", "Haskell", "Scala"] },
+        { "course": "IAT 265", "title": "Digital Media Programming", "skills_taught": ["JavaScript"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["JavaScript", "Python"] }
+      ],
+      "summary": "Python expands into IAT courses. JavaScript gains presence across both departments. Java remains the OOP and algorithms teaching language. Comparative Languages course begins rotating in modern scripting."
+    },
+    "2020": {
+      "courses_and_skills": [
+        { "course": "CMPT 120/125", "title": "Intro to Computing Science I & II", "skills_taught": ["Python", "Java"] },
+        { "course": "CMPT 212", "title": "Introduction to Object-Oriented Programming", "skills_taught": ["Java"] },
+        { "course": "CMPT 225", "title": "Data Structures and Algorithms", "skills_taught": ["Python", "Java"] },
+        { "course": "CMPT 295", "title": "Computer Architecture", "skills_taught": ["C", "Assembly"] },
+        { "course": "CMPT 383", "title": "Comparative Programming Languages", "skills_taught": ["Python", "JavaScript", "Go", "Rust"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Machine Learning", "skills_taught": ["Python"] },
+        { "course": "IAT 265", "title": "Digital Media Programming", "skills_taught": ["JavaScript"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["JavaScript", "Python"] }
+      ],
+      "summary": "Python grows as the primary intro language alongside Java. CMPT 383 begins rotating Go and Rust. ML special topics course solidifies Python as the data/AI language. JavaScript stable in IAT."
+    },
+    "2022": {
+      "courses_and_skills": [
+        { "course": "CMPT 120/125", "title": "Intro to Computing Science I & II", "skills_taught": ["Python"] },
+        { "course": "CMPT 212", "title": "Introduction to Object-Oriented Programming", "skills_taught": ["Java"] },
+        { "course": "CMPT 225", "title": "Data Structures and Algorithms", "skills_taught": ["Python", "Java"] },
+        { "course": "CMPT 295", "title": "Computer Architecture", "skills_taught": ["C", "Assembly"] },
+        { "course": "CMPT 383", "title": "Comparative Programming Languages", "skills_taught": ["Python", "JavaScript", "TypeScript", "Rust"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Deep Learning", "skills_taught": ["Python"] },
+        { "course": "IAT 265", "title": "Digital Media Programming", "skills_taught": ["JavaScript", "TypeScript"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["JavaScript", "Python"] }
+      ],
+      "summary": "Python becomes the primary intro language. TypeScript begins appearing in CMPT 383 and IAT web courses. Rust added to comparative languages. Java retained for OOP course. Deep Learning solidifies Python dominance for AI tracks."
+    },
+    "2024": {
+      "courses_and_skills": [
+        { "course": "CMPT 120/125", "title": "Intro to Computing Science I & II", "skills_taught": ["Python"] },
+        { "course": "CMPT 212", "title": "Introduction to Object-Oriented Programming", "skills_taught": ["Java"] },
+        { "course": "CMPT 225", "title": "Data Structures and Algorithms", "skills_taught": ["Python"] },
+        { "course": "CMPT 295", "title": "Computer Architecture", "skills_taught": ["C", "Assembly"] },
+        { "course": "CMPT 383", "title": "Comparative Programming Languages", "skills_taught": ["Python", "TypeScript", "Rust", "Go"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "AI/ML Systems", "skills_taught": ["Python"] },
+        { "course": "IAT 265", "title": "Digital Media Programming", "skills_taught": ["JavaScript", "TypeScript"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["JavaScript", "TypeScript", "Python"] },
+        { "course": "IAT 111", "title": "Artificial Intelligence Today & Tomorrow", "skills_taught": ["Python"] }
+      ],
+      "summary": "Python fully dominant in intro and algorithms. TypeScript now standard in IAT web courses. CMPT 383 covers Rust and Go. New IAT 111 AI course introduced. Java retained only for dedicated OOP course."
+    },
+    "2026": {
+      "courses_and_skills": [
+        { "course": "CMPT 120/125", "title": "Intro to Computing Science I & II", "skills_taught": ["Python"] },
+        { "course": "CMPT 212", "title": "Introduction to Object-Oriented Programming", "skills_taught": ["Java"] },
+        { "course": "CMPT 225", "title": "Data Structures and Algorithms", "skills_taught": ["Python"] },
+        { "course": "CMPT 295", "title": "Computer Architecture", "skills_taught": ["C", "Rust"] },
+        { "course": "CMPT 383", "title": "Comparative Programming Languages", "skills_taught": ["TypeScript", "Rust", "Go", "Python"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Generative AI Engineering", "skills_taught": ["Python"] },
+        { "course": "IAT 265", "title": "Digital Media Programming", "skills_taught": ["JavaScript", "TypeScript"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["JavaScript", "TypeScript", "Python"] },
+        { "course": "IAT 111", "title": "Artificial Intelligence Today & Tomorrow", "skills_taught": ["Python"] }
+      ],
+      "summary": "Python remains dominant. Rust now appears in both CMPT 295 (replacing some C) and CMPT 383. TypeScript standard across web-facing courses. Special topics pivots to Generative AI. Java retained for OOP only. Go and TypeScript in comparative."
+    }
+  },
+  "Frameworks": {
+    "2016": {
+      "courses_and_skills": [
+        { "course": "CMPT 370", "title": "Software Engineering", "skills_taught": ["Agile methodology", "UML design patterns"] },
+        { "course": "CMPT 276", "title": "Design and Analysis of Algorithms", "skills_taught": ["Algorithm design frameworks"] },
+        { "course": "IAT 265", "title": "Digital Media Programming", "skills_taught": ["jQuery", "Basic HTML/CSS frameworks"] },
+        { "course": "IAT 333", "title": "Interaction Design Methods", "skills_taught": ["Prototyping tools"] }
+      ],
+      "summary": "No modern web frameworks in core curriculum. IAT 265 teaches jQuery for DOM manipulation. Software Engineering focuses on process (Agile/UML) not tool frameworks. Web framework exposure is minimal—gap exists vs industry demand for AngularJS."
+    },
+    "2018": {
+      "courses_and_skills": [
+        { "course": "CMPT 370", "title": "Software Engineering", "skills_taught": ["Agile/Scrum methodology"] },
+        { "course": "IAT 265", "title": "Digital Media Programming", "skills_taught": ["React (intro)", "HTML/CSS"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["Node.js (intro)", "Express basics"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Web Development", "skills_taught": ["Express.js", "Django (intro)"] }
+      ],
+      "summary": "React begins appearing in IAT 265. Node.js/Express introduced in IAT 267 and special topics. Django touches in electives. Gap still exists for Angular coverage. Core CMPT remains framework-agnostic."
+    },
+    "2020": {
+      "courses_and_skills": [
+        { "course": "CMPT 370", "title": "Software Engineering", "skills_taught": ["Agile/Scrum", "CI/CD concepts"] },
+        { "course": "IAT 265", "title": "Digital Media Programming", "skills_taught": ["React", "HTML/CSS"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["React", "Node.js", "Express.js"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Full Stack Web", "skills_taught": ["React", "Express.js", "Django"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Machine Learning", "skills_taught": ["TensorFlow", "scikit-learn"] }
+      ],
+      "summary": "React now taught across multiple courses (IAT 265, IAT 267, special topics). Node.js/Express solidified as backend framework. TensorFlow/scikit-learn introduced for ML. Django available in electives. Vue.js not yet in curriculum—gap vs industry."
+    },
+    "2022": {
+      "courses_and_skills": [
+        { "course": "CMPT 370", "title": "Software Engineering", "skills_taught": ["Agile/Scrum", "Microservices concepts"] },
+        { "course": "IAT 265", "title": "Digital Media Programming", "skills_taught": ["React", "Next.js (intro)"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["React", "Node.js", "Express.js"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Modern Web Development", "skills_taught": ["React", "Next.js", "Express.js"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Deep Learning", "skills_taught": ["PyTorch", "TensorFlow"] }
+      ],
+      "summary": "Next.js begins appearing alongside React in IAT and special topics. PyTorch added alongside TensorFlow. Microservices architecture introduced conceptually in Software Engineering. FastAPI not yet in curriculum—gap vs industry."
+    },
+    "2024": {
+      "courses_and_skills": [
+        { "course": "CMPT 370", "title": "Software Engineering", "skills_taught": ["Agile/Scrum", "Microservices", "API design"] },
+        { "course": "IAT 265", "title": "Digital Media Programming", "skills_taught": ["React", "Next.js"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["React", "Next.js", "Node.js"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "AI/ML Engineering", "skills_taught": ["PyTorch", "TensorFlow", "FastAPI"] },
+        { "course": "IAT 111", "title": "AI Today & Tomorrow", "skills_taught": ["AI application concepts", "Prompt engineering (intro)"] }
+      ],
+      "summary": "React + Next.js now the standard web stack taught. FastAPI introduced in ML engineering special topics. IAT 111 covers AI concepts and basic prompt engineering. Node.js still taught but Next.js takes focus. Angular remains absent—gap vs enterprise demand."
+    },
+    "2026": {
+      "courses_and_skills": [
+        { "course": "CMPT 370", "title": "Software Engineering", "skills_taught": ["Agile/Scrum", "Microservices", "API design", "AI-assisted development"] },
+        { "course": "IAT 265", "title": "Digital Media Programming", "skills_taught": ["React", "Next.js"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["React", "Next.js", "Node.js"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Generative AI Engineering", "skills_taught": ["LangChain", "FastAPI", "PyTorch"] },
+        { "course": "IAT 111", "title": "AI Today & Tomorrow", "skills_taught": ["Prompt engineering", "AI application design", "LLM concepts"] }
+      ],
+      "summary": "LangChain introduced in Gen AI special topics—first direct coverage of AI orchestration frameworks. React + Next.js remain the fullstack web stack. FastAPI covered for AI-era APIs. Angular and Vue.js remain absent. Flutter not in curriculum—gap for mobile roles."
+    }
+  },
+  "Databases": {
+    "2016": {
+      "courses_and_skills": [
+        { "course": "CMPT 354", "title": "Database Systems I", "skills_taught": ["SQL", "Relational DB design", "MySQL", "PostgreSQL"] },
+        { "course": "CMPT 454", "title": "Database Systems II", "skills_taught": ["Query optimization", "Transaction management", "Normalization"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["Basic SQL"] }
+      ],
+      "summary": "SQL and relational database design are well-covered via CMPT 354/454. MySQL and PostgreSQL taught. NoSQL (MongoDB) not in core curriculum—gap vs industry MongoDB demand. Redis and cloud DBs not covered."
+    },
+    "2018": {
+      "courses_and_skills": [
+        { "course": "CMPT 354", "title": "Database Systems I", "skills_taught": ["SQL", "Relational DB design", "PostgreSQL", "MySQL"] },
+        { "course": "CMPT 454", "title": "Database Systems II", "skills_taught": ["Query optimization", "Transaction management", "NoSQL concepts (intro)"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["SQL", "Firebase (intro)"] }
+      ],
+      "summary": "NoSQL concepts introduced in CMPT 454. Firebase basics appear in IAT. PostgreSQL gains focus. Core relational SQL coverage remains strong. MongoDB and DynamoDB still not explicitly covered—gap growing with cloud DB adoption."
+    },
+    "2020": {
+      "courses_and_skills": [
+        { "course": "CMPT 354", "title": "Database Systems I", "skills_taught": ["SQL", "PostgreSQL", "Relational design"] },
+        { "course": "CMPT 454", "title": "Database Systems II", "skills_taught": ["NoSQL", "MongoDB (intro)", "Query optimization", "Distributed databases"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Data Engineering", "skills_taught": ["Redis", "Data pipelines"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["SQL", "Firebase"] }
+      ],
+      "summary": "MongoDB now explicitly taught in CMPT 454. Redis and data pipeline concepts introduced in special topics. PostgreSQL remains the primary relational DB. Firebase in IAT for app backends. Cloud data warehouses not yet covered—gap vs Snowflake/BigQuery demand."
+    },
+    "2022": {
+      "courses_and_skills": [
+        { "course": "CMPT 354", "title": "Database Systems I", "skills_taught": ["SQL", "PostgreSQL", "Relational design"] },
+        { "course": "CMPT 454", "title": "Database Systems II", "skills_taught": ["NoSQL", "MongoDB", "Redis", "Distributed systems"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Data Science Pipelines", "skills_taught": ["SQL", "Data warehousing concepts", "ETL basics"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["SQL", "Firebase"] }
+      ],
+      "summary": "MongoDB and Redis now standard in CMPT 454. Data warehousing concepts introduced in special topics. PostgreSQL confirmed as primary DB. Snowflake/BigQuery and cloud-specific tools not yet in curriculum—notable gap vs industry data engineering demand."
+    },
+    "2024": {
+      "courses_and_skills": [
+        { "course": "CMPT 354", "title": "Database Systems I", "skills_taught": ["SQL", "PostgreSQL", "Relational design"] },
+        { "course": "CMPT 454", "title": "Database Systems II", "skills_taught": ["NoSQL", "MongoDB", "Redis", "Cloud DB concepts"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "AI/ML Systems", "skills_taught": ["SQL for ML", "Vector embeddings (intro)", "Data pipelines"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["SQL", "Firebase"] }
+      ],
+      "summary": "Vector embeddings concept introduced for AI special topics. Cloud DB concepts discussed in CMPT 454. SQL remains foundational. Snowflake, BigQuery, and dedicated vector DBs (Pinecone) still not explicitly named in curriculum—gap vs 2024 data engineering roles."
+    },
+    "2026": {
+      "courses_and_skills": [
+        { "course": "CMPT 354", "title": "Database Systems I", "skills_taught": ["SQL", "PostgreSQL", "Relational design"] },
+        { "course": "CMPT 454", "title": "Database Systems II", "skills_taught": ["NoSQL", "MongoDB", "Redis", "Cloud databases", "Vector databases (intro)"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Generative AI Engineering", "skills_taught": ["Vector DBs", "RAG pipelines", "Embeddings", "SQL for AI"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["SQL", "Firebase"] }
+      ],
+      "summary": "Vector databases now explicitly covered in both CMPT 454 and Gen AI special topics (essential for RAG/AI). Cloud DB concepts expanded. SQL and PostgreSQL remain core. Snowflake and BigQuery still taught only conceptually—gap persists for dedicated data warehouse roles."
+    }
+  },
+  "Tools": {
+    "2016": {
+      "courses_and_skills": [
+        { "course": "CMPT 370", "title": "Software Engineering", "skills_taught": ["Git", "Agile/JIRA", "Basic testing"] },
+        { "course": "CMPT 275/276", "title": "Software Development Methods", "skills_taught": ["Version control", "Basic CI"] },
+        { "course": "CMPT 300", "title": "Operating Systems", "skills_taught": ["Linux CLI", "Shell scripting"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["Basic web server setup"] }
+      ],
+      "summary": "Git and Linux are taught. Basic CI concepts in software engineering. Docker, Kubernetes, and cloud platforms (AWS/Azure) not in curriculum—significant gap vs industry DevOps expectations even in 2016."
+    },
+    "2018": {
+      "courses_and_skills": [
+        { "course": "CMPT 370", "title": "Software Engineering", "skills_taught": ["Git/GitHub", "Agile/JIRA", "CI/CD concepts"] },
+        { "course": "CMPT 300", "title": "Operating Systems", "skills_taught": ["Linux", "Shell scripting"] },
+        { "course": "CMPT 431", "title": "Distributed Systems", "skills_taught": ["Linux", "Networking fundamentals"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "DevOps Intro", "skills_taught": ["Docker (intro)", "Basic CI/CD"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["Web deployment basics"] }
+      ],
+      "summary": "Docker introduced in special topics. CI/CD concepts expanded in CMPT 370. Git/GitHub standard. Linux well-covered. AWS/Kubernetes still absent—growing gap vs industry cloud/container adoption."
+    },
+    "2020": {
+      "courses_and_skills": [
+        { "course": "CMPT 370", "title": "Software Engineering", "skills_taught": ["Git/GitHub", "CI/CD pipelines", "Agile"] },
+        { "course": "CMPT 300", "title": "Operating Systems", "skills_taught": ["Linux", "Shell scripting", "Containerization concepts"] },
+        { "course": "CMPT 431", "title": "Distributed Systems", "skills_taught": ["Linux", "Microservices concepts"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Cloud Computing", "skills_taught": ["AWS basics", "Docker", "Deployment"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["Git", "Web deployment"] }
+      ],
+      "summary": "AWS and Docker now in special topics. CI/CD pipelines taught in CMPT 370. Containerization concepts in OS course. Kubernetes still not covered—gap vs industry demand. Terraform and IaC not in curriculum."
+    },
+    "2022": {
+      "courses_and_skills": [
+        { "course": "CMPT 370", "title": "Software Engineering", "skills_taught": ["Git/GitHub", "CI/CD", "GitHub Actions", "Agile"] },
+        { "course": "CMPT 300", "title": "Operating Systems", "skills_taught": ["Linux", "Docker"] },
+        { "course": "CMPT 431", "title": "Distributed Systems", "skills_taught": ["Docker", "Kubernetes (intro)", "Microservices"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Cloud Engineering", "skills_taught": ["AWS", "Azure basics", "Terraform (intro)"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["Git", "GitHub", "Basic deployment"] }
+      ],
+      "summary": "Kubernetes introduced in Distributed Systems. GitHub Actions taught in CMPT 370. Terraform introduced in cloud special topics. Docker now in core OS course. Multi-cloud (AWS + Azure) coverage begins. Observability tools (Datadog/Prometheus) still absent."
+    },
+    "2024": {
+      "courses_and_skills": [
+        { "course": "CMPT 370", "title": "Software Engineering", "skills_taught": ["Git/GitHub", "CI/CD", "GitHub Actions", "Agile", "AI-assisted coding intro"] },
+        { "course": "CMPT 300", "title": "Operating Systems", "skills_taught": ["Linux", "Docker", "Containers"] },
+        { "course": "CMPT 431", "title": "Distributed Systems", "skills_taught": ["Docker", "Kubernetes", "Microservices"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "AI/ML Systems", "skills_taught": ["AWS", "MLOps concepts", "Model deployment"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["Git", "GitHub", "Deployment pipelines"] }
+      ],
+      "summary": "AI-assisted coding (GitHub Copilot concepts) introduced. MLOps concepts appear in AI special topics. Kubernetes solidified in Distributed Systems. CI/CD + GitHub Actions standard. Terraform taught in cloud topics. Observability and monitoring still a gap."
+    },
+    "2026": {
+      "courses_and_skills": [
+        { "course": "CMPT 370", "title": "Software Engineering", "skills_taught": ["Git/GitHub", "CI/CD", "GitHub Actions", "AI coding assistants", "DevSecOps concepts"] },
+        { "course": "CMPT 300", "title": "Operating Systems", "skills_taught": ["Linux", "Docker", "Containers"] },
+        { "course": "CMPT 431", "title": "Distributed Systems", "skills_taught": ["Docker", "Kubernetes", "Service mesh concepts"] },
+        { "course": "CMPT 469 (Special Topics)", "title": "Generative AI Engineering", "skills_taught": ["MLOps", "AWS/GCP for AI", "Model deployment", "Prompt engineering"] },
+        { "course": "IAT 267", "title": "Introduction to Technological Systems", "skills_taught": ["Git", "GitHub", "CI/CD basics"] }
+      ],
+      "summary": "AI coding assistants now explicitly taught in CMPT 370. DevSecOps concepts introduced. Service mesh in Distributed Systems. MLOps and cloud AI deployment in special topics. Prompt engineering taught. Observability tools (Prometheus/Grafana/Datadog) remain a curriculum gap."
+    }
+  }
+}

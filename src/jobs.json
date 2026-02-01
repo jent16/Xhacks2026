@@ -1,13 +1,93 @@
-[
-  { "year": 2016, "title": "Full Stack Web Developer", "description": "Dominance of jQuery and monolithic PHP backends.", "skills": ["jQuery", "PHP", "HTML5", "CSS3", "SQL", "Photoshop"], "popularity": 45 },
-  { "year": 2017, "title": "Modern Web Specialist", "description": "The transition from jQuery to early Angular and React.", "skills": ["JavaScript ES5", "AngularJS", "Bootstrap", "CSS3", "SASS", "MySQL"], "popularity": 50 },
-  { "year": 2018, "title": "Frontend Engineer", "description": "Component-based architecture becomes the industry standard.", "skills": ["React", "Redux", "ES6 JavaScript", "SASS", "Webpack", "Git"], "popularity": 60 },
-  { "year": 2019, "title": "Product Developer", "description": "Mobile-first design and the rise of the MERN stack.", "skills": ["React", "Node.js", "Express", "MongoDB", "Firebase", "Rest APIs"], "popularity": 68 },
-  { "year": 2020, "title": "Cloud & DevOps Engineer", "description": "Serverless and containers take over for scalability.", "skills": ["React Hooks", "Node.js", "Docker", "AWS Lambda", "CI/CD", "NoSQL"], "popularity": 75 },
-  { "year": 2021, "title": "Full Stack Engineer", "description": "Strong emphasis on type-safety and developer experience.", "skills": ["TypeScript", "React Hooks", "GraphQL", "Tailwind CSS", "Next.js", "Jest"], "popularity": 80 },
-  { "year": 2022, "title": "Senior Software Engineer", "description": "The 'Next.js Era' of full-stack React applications.", "skills": ["TypeScript", "Next.js", "GraphQL", "Tailwind", "PostgreSQL", "Go"], "popularity": 88 },
-  { "year": 2023, "title": "AI Product Engineer", "description": "The first wave of LLM integrations using OpenAI APIs.", "skills": ["Next.js", "TypeScript", "Python", "OpenAI API", "Pinecone", "LangChain"], "popularity": 91 },
-  { "year": 2024, "title": "AI & Data Engineer", "description": "Focusing on RAG patterns and production AI workflows.", "skills": ["Python", "PyTorch", "Vector Databases", "LangChain", "RAG Patterns", "FastAPI"], "popularity": 94 },
-  { "year": 2025, "title": "Cognitive Systems Developer", "description": "Building autonomous tools that handle multi-step reasoning.", "skills": ["Agentic Workflows", "Python", "Rust", "LLMOps", "Fine-tuning", "Prompt Engineering"], "popularity": 96 },
-  { "year": 2026, "title": "Agentic Systems Architect", "description": "Orchestrating AI agents and low-latency distributed systems.", "skills": ["Agentic Workflows", "Rust", "Model Fine-tuning", "Vercel AI SDK", "Cybersecurity", "Distributed Systems"], "popularity": 98 }
-]
+{
+  "Full Stack Developer": {
+    "2016": ["PHP", "jQuery", "MySQL", "HTML/CSS", "Bootstrap"],
+    "2017": ["JavaScript ES6", "Node.js", "AngularJS", "MongoDB"],
+    "2018": ["React", "Express", "Redux", "SASS", "Git"],
+    "2019": ["TypeScript", "Next.js", "GraphQL", "Docker"],
+    "2020": ["React Hooks", "PostgreSQL", "AWS Basics", "Serverless"],
+    "2021": ["Tailwind CSS", "Prisma", "Vite", "Firebase"],
+    "2022": ["Next.js 13", "tRPC", "Zustand", "Playwright"],
+    "2023": ["OpenAI API", "Vector DBs", "LangChain", "App Router"],
+    "2024": ["FastAPI", "Python", "RAG Patterns", "Vercel AI SDK"],
+    "2025": ["Agentic Workflows", "Rust", "LLMOps", "Distributed Systems"],
+    "2026": ["Autonomous AI Agents", "WebAssembly", "Edge Computing", "Rust"]
+  },
+  "AI/ML Engineer": {
+    "2016": ["Python", "Scikit-Learn", "R", "Linear Algebra"],
+    "2017": ["TensorFlow", "Keras", "Neural Networks", "Pandas"],
+    "2018": ["PyTorch", "NLP", "Computer Vision", "Jupyter"],
+    "2019": ["Deep Learning", "Spark", "Data Engineering", "SQL"],
+    "2020": ["Transformers", "MLOps", "MLflow", "Cloud AI"],
+    "2021": ["GPT-3 Basics", "Fine-tuning", "HuggingFace", "Streamlit"],
+    "2022": ["Stable Diffusion", "RLHF", "Vector Embeddings", "NumPy"],
+    "2023": ["Large Language Models", "Prompt Engineering", "Pinecone"],
+    "2024": ["Agentic RAG", "LlamaIndex", "Model Quantization"],
+    "2025": ["Multi-modal AI", "Synthetic Data", "Small Language Models"],
+    "2026": ["Physical AI", "Neuro-Symbolic AI", "Real-time Inference"]
+  },
+  "Data Analyst": {
+    "2016": ["Excel", "SQL", "Statistics", "SAS"],
+    "2017": ["Tableau", "R", "Matplotlib", "Data Cleaning"],
+    "2018": ["Power BI", "Python", "Pandas", "Hypothesis Testing"],
+    "2019": ["SQL Server", "Google Analytics", "BigQuery"],
+    "2020": ["Data Storytelling", "Seaborn", "Cloud Data Warehouses"],
+    "2021": ["Snowflake", "dbt", "Looker", "Advanced SQL"],
+    "2022": ["Python for Data Science", "Automation", "Predictive Analytics"],
+    "2023": ["AI Data Assistants", "Exploratory Data Analysis", "Databricks"],
+    "2024": ["Generative BI", "Vector Analysis", "Automated ETL"],
+    "2025": ["Real-time Analytics", "Governance", "Insight Automation"],
+    "2026": ["Autonomous Analytics", "Natural Language Querying", "Data Mesh"]
+  },
+  "Game Developer": {
+    "2016": ["C++", "C#", "Unity 5", "OpenGL"],
+    "2017": ["Unreal Engine 4", "DirectX 11", "3D Math", "Shaders"],
+    "2018": ["Vulkan", "Mobile Gaming", "Multiplayer Netcode"],
+    "2019": ["Ray Tracing", "Unity ECS", "Blender", "Substance"],
+    "2020": ["DLSS", "Cloud Gaming", "VR/AR (Quest)", "C++17"],
+    "2021": ["Unreal Engine 5", "Nanite", "Lumen", "C# 9.0"],
+    "2022": ["Procedural Generation", "Spatial Audio", "Blueprints"],
+    "2023": ["AI NPCs", "Metaverse Dev", "Chaos Physics"],
+    "2024": ["Generative Assets", "Neural Rendering", "Mixed Reality"],
+    "2025": ["AI-Driven Level Design", "Cross-Platform Engines", "C++23"],
+    "2026": ["Holodeck Simulations", "DirectStorage", "AI Mechanics"]
+  },
+  "Mobile Developer": {
+    "2016": ["Objective-C", "Java", "Swift 2", "XML"],
+    "2017": ["Swift 3", "Android Studio", "React Native (early)"],
+    "2018": ["Kotlin", "SwiftUI (intro)", "Flutter (early)"],
+    "2019": ["Dart", "Combine Framework", "GraphQL for Mobile"],
+    "2020": ["Jetpack Compose", "SwiftUI", "Firebase Auth"],
+    "2021": ["Cross-platform Performance", "MVI Architecture"],
+    "2022": ["Bluetooth LE", "ARKit", "Jetpack Glance"],
+    "2023": ["Mobile AI Models", "Super Apps", "Dynamic Islands"],
+    "2024": ["Spatial Computing", "Kotlin Multiplatform", "On-device LLMs"],
+    "2025": ["Zero-UI Apps", "Neural Engine Optimization", "PWA Evolution"],
+    "2026": ["Foldable UX", "AI Agent Interfaces", "6G Optimization"]
+  },
+  "DevOps Engineer": {
+    "2016": ["Jenkins", "Vagrant", "Linux", "Bash"],
+    "2017": ["Ansible", "Puppet", "Docker (basics)", "Nagios"],
+    "2018": ["Kubernetes", "AWS", "Terraform", "CI/CD"],
+    "2019": ["Prometheus", "Helm", "Azure", "GitOps"],
+    "2020": ["Istio", "Serverless Ops", "GitHub Actions"],
+    "2021": ["Terraform Cloud", "ArgoCD", "Observability"],
+    "2022": ["Cloud-Native Security", "eBPF", "FinOps"],
+    "2023": ["Platform Engineering", "AIOps", "Supply Chain Security"],
+    "2024": ["Internal Developer Portals", "Infrastructure AI"],
+    "2025": ["Autonomous Scaling", "Self-healing Systems", "GreenOps"],
+    "2026": ["Post-Quantum Security", "Cognitive DevOps Agents", "Edge Ops"]
+  },
+  "Cybersecurity Analyst": {
+    "2016": ["Firewalls", "Wireshark", "Metasploit", "Nmap"],
+    "2017": ["Penetration Testing", "IDS/IPS", "Ethical Hacking"],
+    "2018": ["Cloud Security", "SIEM", "Incident Response"],
+    "2019": ["Zero Trust", "EDR", "Identity Management"],
+    "2020": ["DevSecOps", "WAF", "SOAR", "Compliance"],
+    "2021": ["SASE", "Extended Detection (XDR)", "Container Security"],
+    "2022": ["API Security", "Ransomware Defense", "Threat Hunting"],
+    "2023": ["AI Threat Intelligence", "Supply Chain Risk", "SBOM"],
+    "2024": ["Generative AI Security", "Deepfake Detection", "Automated IR"],
+    "2025": ["Quantum-Resistant Crypto", "AI Red Teaming", "Identity Proofing"],
+    "2026": ["Autonomous Defense Systems", "Algorithmic Governance", "Full Mesh Security"]
+  }
+}
