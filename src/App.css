@@ -1,51 +1,41 @@
-.ratio-dashboard {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px 0;
-  text-align: center;
+.study-plan-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 12px;
+  border: 1px dashed #6366f1;
 }
 
-.ratio-stat {
-  display: flex;
-  flex-direction: column;
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
 }
 
-.big-number {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #4ade80;
-  line-height: 1;
-}
-
-.ratio-divider {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #475569;
-  text-transform: uppercase;
-}
-
-.recommendation-box {
-  margin-top: 20px;
-  background: #0f172a;
+.resource-card {
+  background: #1e293b;
   padding: 15px;
   border-radius: 8px;
-  border-left: 4px solid #6366f1;
+  text-decoration: none;
+  border: 1px solid #334155;
+  transition: transform 0.2s, border-color 0.2s;
 }
 
-.recommendation-box h4 {
-  margin-bottom: 10px;
-  color: #6366f1;
-  font-size: 0.9rem;
+.resource-card:hover {
+  transform: translateY(-3px);
+  border-color: #6366f1;
 }
 
-.recommendation-box ul {
-  list-style: none;
-  padding: 0;
-}
-
-.recommendation-box li {
-  font-size: 0.85rem;
+.resource-name {
+  display: block;
+  font-weight: bold;
   color: #f1f5f9;
   margin-bottom: 5px;
+}
+
+.resource-action {
+  font-size: 0.75rem;
+  color: #6366f1;
+  font-weight: bold;
 }
