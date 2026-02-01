@@ -1,0 +1,446 @@
+{
+  "Data Scientist": {
+    "description": "Master data analysis, machine learning, and statistical modeling to extract insights from complex datasets",
+    "difficulty": "Hard",
+    "totalTime": "18-24 months",
+    "roadmap": {
+      "id": "ds-start",
+      "title": "Foundation",
+      "skills": ["Python", "Statistics", "SQL"],
+      "time": "3 months",
+      "difficulty": "Beginner",
+      "prerequisites": [],
+      "children": [
+        {
+          "id": "ds-data",
+          "title": "Data Analysis",
+          "skills": ["Pandas", "NumPy", "Data Visualization", "Jupyter"],
+          "time": "3 months",
+          "difficulty": "Intermediate",
+          "prerequisites": ["Python", "Statistics"],
+          "children": [
+            {
+              "id": "ds-ml",
+              "title": "Machine Learning",
+              "skills": ["Scikit-learn", "Supervised Learning", "Unsupervised Learning"],
+              "time": "4 months",
+              "difficulty": "Intermediate",
+              "prerequisites": ["Pandas", "Statistics"],
+              "children": [
+                {
+                  "id": "ds-deep",
+                  "title": "Deep Learning",
+                  "skills": ["PyTorch", "TensorFlow", "Neural Networks", "CNNs", "RNNs"],
+                  "time": "4 months",
+                  "difficulty": "Hard",
+                  "prerequisites": ["Machine Learning", "Linear Algebra"],
+                  "children": [
+                    {
+                      "id": "ds-nlp",
+                      "title": "NLP Specialist",
+                      "skills": ["Transformers", "BERT", "GPT", "LangChain"],
+                      "time": "3 months",
+                      "difficulty": "Advanced",
+                      "prerequisites": ["Deep Learning", "PyTorch"]
+                    },
+                    {
+                      "id": "ds-cv",
+                      "title": "Computer Vision",
+                      "skills": ["OpenCV", "YOLO", "Image Processing", "GANs"],
+                      "time": "3 months",
+                      "difficulty": "Advanced",
+                      "prerequisites": ["Deep Learning", "CNNs"]
+                    }
+                  ]
+                },
+                {
+                  "id": "ds-mlops",
+                  "title": "MLOps Engineer",
+                  "skills": ["MLflow", "Docker", "Kubernetes", "CI/CD", "Model Deployment"],
+                  "time": "3 months",
+                  "difficulty": "Hard",
+                  "prerequisites": ["Machine Learning", "DevOps Basics"],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "ds-de",
+              "title": "Data Engineering",
+              "skills": ["Spark", "Airflow", "ETL", "Data Pipelines"],
+              "time": "4 months",
+              "difficulty": "Intermediate",
+              "prerequisites": ["SQL", "Python"],
+              "children": [
+                {
+                  "id": "ds-bigdata",
+                  "title": "Big Data Engineer",
+                  "skills": ["Hadoop", "Kafka", "Snowflake", "Databricks"],
+                  "time": "4 months",
+                  "difficulty": "Hard",
+                  "prerequisites": ["Spark", "Data Pipelines"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Product Manager": {
+    "description": "Lead product strategy, development, and launch while balancing user needs with business goals",
+    "difficulty": "Medium",
+    "totalTime": "12-18 months",
+    "roadmap": {
+      "id": "pm-start",
+      "title": "Product Fundamentals",
+      "skills": ["Product Strategy", "User Research", "Market Analysis", "Roadmapping"],
+      "time": "2 months",
+      "difficulty": "Beginner",
+      "prerequisites": [],
+      "children": [
+        {
+          "id": "pm-agile",
+          "title": "Agile & Execution",
+          "skills": ["Scrum", "Kanban", "Sprint Planning", "JIRA"],
+          "time": "2 months",
+          "difficulty": "Intermediate",
+          "prerequisites": ["Product Strategy"],
+          "children": [
+            {
+              "id": "pm-data",
+              "title": "Data-Driven PM",
+              "skills": ["Analytics", "A/B Testing", "SQL", "Metrics", "KPIs"],
+              "time": "3 months",
+              "difficulty": "Intermediate",
+              "prerequisites": ["Agile"],
+              "children": [
+                {
+                  "id": "pm-growth",
+                  "title": "Growth PM",
+                  "skills": ["Growth Hacking", "Experimentation", "Funnel Optimization", "Retention"],
+                  "time": "3 months",
+                  "difficulty": "Hard",
+                  "prerequisites": ["A/B Testing", "Analytics"]
+                }
+              ]
+            },
+            {
+              "id": "pm-tech",
+              "title": "Technical PM",
+              "skills": ["API Design", "System Architecture", "Technical Documentation", "SQL"],
+              "time": "4 months",
+              "difficulty": "Hard",
+              "prerequisites": ["Agile", "Basic Programming"],
+              "children": [
+                {
+                  "id": "pm-ai",
+                  "title": "AI Product Manager",
+                  "skills": ["ML Basics", "LLM Products", "AI Ethics", "Prompt Engineering"],
+                  "time": "3 months",
+                  "difficulty": "Advanced",
+                  "prerequisites": ["Technical PM", "ML Basics"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pm-ux",
+          "title": "UX & Design",
+          "skills": ["Wireframing", "Figma", "User Flows", "Design Thinking"],
+          "time": "3 months",
+          "difficulty": "Intermediate",
+          "prerequisites": ["User Research"],
+          "children": [
+            {
+              "id": "pm-senior",
+              "title": "Senior PM",
+              "skills": ["Strategy", "Leadership", "Stakeholder Management", "OKRs"],
+              "time": "6 months",
+              "difficulty": "Advanced",
+              "prerequisites": ["Multiple PM Domains"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Quant Analyst": {
+    "description": "Apply mathematical models and statistical analysis to financial markets and trading strategies",
+    "difficulty": "Very Hard",
+    "totalTime": "24-36 months",
+    "roadmap": {
+      "id": "quant-start",
+      "title": "Mathematical Foundation",
+      "skills": ["Calculus", "Linear Algebra", "Probability", "Statistics"],
+      "time": "4 months",
+      "difficulty": "Hard",
+      "prerequisites": [],
+      "children": [
+        {
+          "id": "quant-prog",
+          "title": "Programming for Finance",
+          "skills": ["Python", "C++", "R", "SQL"],
+          "time": "3 months",
+          "difficulty": "Intermediate",
+          "prerequisites": ["Mathematics"],
+          "children": [
+            {
+              "id": "quant-finance",
+              "title": "Quantitative Finance",
+              "skills": ["Financial Markets", "Derivatives", "Options Pricing", "Risk Management"],
+              "time": "5 months",
+              "difficulty": "Hard",
+              "prerequisites": ["Probability", "Python"],
+              "children": [
+                {
+                  "id": "quant-trading",
+                  "title": "Algorithmic Trading",
+                  "skills": ["Trading Strategies", "Backtesting", "Market Microstructure", "HFT"],
+                  "time": "4 months",
+                  "difficulty": "Very Hard",
+                  "prerequisites": ["Quant Finance", "C++"],
+                  "children": [
+                    {
+                      "id": "quant-hft",
+                      "title": "HFT Specialist",
+                      "skills": ["Low Latency Systems", "FPGA", "Network Optimization"],
+                      "time": "6 months",
+                      "difficulty": "Expert",
+                      "prerequisites": ["Algorithmic Trading", "System Design"]
+                    }
+                  ]
+                },
+                {
+                  "id": "quant-risk",
+                  "title": "Risk Analyst",
+                  "skills": ["VaR", "Stress Testing", "Monte Carlo", "Credit Risk"],
+                  "time": "4 months",
+                  "difficulty": "Hard",
+                  "prerequisites": ["Quant Finance", "Statistics"]
+                }
+              ]
+            },
+            {
+              "id": "quant-ml",
+              "title": "ML for Finance",
+              "skills": ["Time Series", "Forecasting", "Deep Learning", "Reinforcement Learning"],
+              "time": "5 months",
+              "difficulty": "Very Hard",
+              "prerequisites": ["Python", "Statistics"],
+              "children": [
+                {
+                  "id": "quant-ai",
+                  "title": "AI Quant",
+                  "skills": ["Neural Networks for Trading", "Sentiment Analysis", "Alternative Data"],
+                  "time": "5 months",
+                  "difficulty": "Expert",
+                  "prerequisites": ["ML for Finance", "Deep Learning"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Full Stack Developer": {
+    "description": "Build complete web applications from database to user interface with modern frameworks",
+    "difficulty": "Medium",
+    "totalTime": "12-18 months",
+    "roadmap": {
+      "id": "fs-start",
+      "title": "Web Fundamentals",
+      "skills": ["HTML", "CSS", "JavaScript", "Git"],
+      "time": "2 months",
+      "difficulty": "Beginner",
+      "prerequisites": [],
+      "children": [
+        {
+          "id": "fs-frontend",
+          "title": "Frontend Development",
+          "skills": ["React", "TypeScript", "State Management", "Responsive Design"],
+          "time": "3 months",
+          "difficulty": "Intermediate",
+          "prerequisites": ["JavaScript"],
+          "children": [
+            {
+              "id": "fs-advanced-fe",
+              "title": "Advanced Frontend",
+              "skills": ["Next.js", "SSR", "Performance Optimization", "Testing"],
+              "time": "3 months",
+              "difficulty": "Hard",
+              "prerequisites": ["React", "TypeScript"],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "fs-backend",
+          "title": "Backend Development",
+          "skills": ["Node.js", "Express", "REST APIs", "SQL"],
+          "time": "3 months",
+          "difficulty": "Intermediate",
+          "prerequisites": ["JavaScript"],
+          "children": [
+            {
+              "id": "fs-devops",
+              "title": "DevOps Engineer",
+              "skills": ["Docker", "Kubernetes", "CI/CD", "AWS"],
+              "time": "4 months",
+              "difficulty": "Hard",
+              "prerequisites": ["Backend", "Linux"],
+              "children": [
+                {
+                  "id": "fs-cloud",
+                  "title": "Cloud Architect",
+                  "skills": ["AWS Solutions", "Microservices", "Terraform", "System Design"],
+                  "time": "5 months",
+                  "difficulty": "Advanced",
+                  "prerequisites": ["DevOps", "System Design"]
+                }
+              ]
+            },
+            {
+              "id": "fs-db",
+              "title": "Database Specialist",
+              "skills": ["PostgreSQL", "MongoDB", "Redis", "Database Design"],
+              "time": "3 months",
+              "difficulty": "Intermediate",
+              "prerequisites": ["SQL", "Backend"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Mobile Developer": {
+    "description": "Create native and cross-platform mobile applications for iOS and Android",
+    "difficulty": "Medium",
+    "totalTime": "12-15 months",
+    "roadmap": {
+      "id": "mobile-start",
+      "title": "Mobile Basics",
+      "skills": ["Programming Fundamentals", "UI/UX Principles", "Git"],
+      "time": "2 months",
+      "difficulty": "Beginner",
+      "prerequisites": [],
+      "children": [
+        {
+          "id": "mobile-ios",
+          "title": "iOS Development",
+          "skills": ["Swift", "UIKit", "SwiftUI", "Xcode"],
+          "time": "4 months",
+          "difficulty": "Intermediate",
+          "prerequisites": ["Programming Fundamentals"],
+          "children": [
+            {
+              "id": "mobile-ios-adv",
+              "title": "Advanced iOS",
+              "skills": ["Core Data", "Combine", "Networking", "App Store"],
+              "time": "3 months",
+              "difficulty": "Hard",
+              "prerequisites": ["Swift", "UIKit"]
+            }
+          ]
+        },
+        {
+          "id": "mobile-android",
+          "title": "Android Development",
+          "skills": ["Kotlin", "Jetpack Compose", "Android Studio"],
+          "time": "4 months",
+          "difficulty": "Intermediate",
+          "prerequisites": ["Programming Fundamentals"],
+          "children": [
+            {
+              "id": "mobile-android-adv",
+              "title": "Advanced Android",
+              "skills": ["Room", "Coroutines", "Material Design", "Play Store"],
+              "time": "3 months",
+              "difficulty": "Hard",
+              "prerequisites": ["Kotlin", "Jetpack"]
+            }
+          ]
+        },
+        {
+          "id": "mobile-cross",
+          "title": "Cross-Platform",
+          "skills": ["React Native", "Flutter", "State Management"],
+          "time": "3 months",
+          "difficulty": "Intermediate",
+          "prerequisites": ["Programming Fundamentals"],
+          "children": [
+            {
+              "id": "mobile-lead",
+              "title": "Mobile Lead",
+              "skills": ["Architecture Patterns", "Performance", "Team Leadership"],
+              "time": "4 months",
+              "difficulty": "Advanced",
+              "prerequisites": ["Multiple Platforms"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Cybersecurity Engineer": {
+    "description": "Protect systems, networks, and data from cyber threats and vulnerabilities",
+    "difficulty": "Hard",
+    "totalTime": "18-24 months",
+    "roadmap": {
+      "id": "cyber-start",
+      "title": "Security Fundamentals",
+      "skills": ["Networking", "Linux", "Operating Systems", "Cryptography"],
+      "time": "3 months",
+      "difficulty": "Intermediate",
+      "prerequisites": [],
+      "children": [
+        {
+          "id": "cyber-defense",
+          "title": "Defensive Security",
+          "skills": ["Firewalls", "IDS/IPS", "SIEM", "Incident Response"],
+          "time": "4 months",
+          "difficulty": "Hard",
+          "prerequisites": ["Networking", "Linux"],
+          "children": [
+            {
+              "id": "cyber-soc",
+              "title": "SOC Analyst",
+              "skills": ["Log Analysis", "Threat Hunting", "Forensics"],
+              "time": "3 months",
+              "difficulty": "Hard",
+              "prerequisites": ["SIEM", "Incident Response"]
+            }
+          ]
+        },
+        {
+          "id": "cyber-offense",
+          "title": "Offensive Security",
+          "skills": ["Penetration Testing", "Exploitation", "Metasploit", "Burp Suite"],
+          "time": "4 months",
+          "difficulty": "Hard",
+          "prerequisites": ["Networking", "Linux"],
+          "children": [
+            {
+              "id": "cyber-redteam",
+              "title": "Red Team Operator",
+              "skills": ["Advanced Exploitation", "Social Engineering", "C2 Frameworks"],
+              "time": "5 months",
+              "difficulty": "Very Hard",
+              "prerequisites": ["Penetration Testing"]
+            }
+          ]
+        },
+        {
+          "id": "cyber-appsec",
+          "title": "Application Security",
+          "skills": ["OWASP", "Code Review", "Secure Coding", "Web Vulnerabilities"],
+          "time": "4 months",
+          "difficulty": "Hard",
+          "prerequisites": ["Security Fundamentals", "Programming"]
+        }
+      ]
+    }
+  }
+}

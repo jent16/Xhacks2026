@@ -1,0 +1,321 @@
+/* Roadmap Node Styles */
+.roadmap-node-container {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.roadmap-node-container.root-node {
+  margin-top: 0;
+}
+
+.roadmap-node {
+  background: var(--bg-secondary, #1a1a1a);
+  border: 3px solid;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  max-width: 600px;
+}
+
+.roadmap-node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.roadmap-node.has-children {
+  cursor: pointer;
+}
+
+.roadmap-node.completed {
+  opacity: 0.7;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--bg-secondary, #1a1a1a),
+    var(--bg-secondary, #1a1a1a) 10px,
+    rgba(74, 222, 128, 0.05) 10px,
+    rgba(74, 222, 128, 0.05) 20px
+  );
+}
+
+.roadmap-node.completed::after {
+  content: '✓ Completed';
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #4ade80;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Difficulty-based colors */
+.roadmap-node.beginner { border-color: #4ade80; }
+.roadmap-node.intermediate { border-color: #3b82f6; }
+.roadmap-node.hard { border-color: #f59e0b; }
+.roadmap-node.very-hard { border-color: #f87171; }
+.roadmap-node.advanced { border-color: #a855f7; }
+.roadmap-node.expert { border-color: #ec4899; }
+
+/* Node Header */
+.node-header {
+  margin-bottom: 1rem;
+}
+
+.node-title-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.expand-icon {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #888);
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.expand-icon.expanded {
+  transform: rotate(90deg);
+}
+
+.node-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary, #fff);
+  margin: 0;
+  flex: 1;
+}
+
+.complete-checkbox {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--border-color, #555);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: white;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.complete-checkbox:hover {
+  border-color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+}
+
+.complete-checkbox.checked {
+  background: #4ade80;
+  border-color: #4ade80;
+}
+
+/* Node Content */
+.node-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.node-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.meta-badge {
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.meta-badge.time {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+}
+
+.meta-badge.difficulty {
+  color: white;
+}
+
+/* Skills Section */
+.node-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skills-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary, #888);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  color: #a78bfa;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+}
+
+/* Prerequisites Section */
+.node-prerequisites {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color, #333);
+}
+
+.prereq-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary, #888);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.prereq-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.prereq-item {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Node Children */
+.node-children {
+  margin-left: 3rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.child-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.connection-line {
+  position: absolute;
+  left: -3rem;
+  top: 2rem;
+  width: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--border-color, #555) 0%, transparent 100%);
+}
+
+.connection-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -2rem;
+  width: 2px;
+  height: 2rem;
+  background: var(--border-color, #555);
+}
+
+.child-wrapper:first-child .connection-line::before {
+  top: -4rem;
+  height: 4rem;
+}
+
+.child-wrapper:last-child .connection-line::before {
+  height: 2rem;
+}
+
+/* Leaf Node (No children) */
+.roadmap-node.leaf-node {
+  border-style: dashed;
+}
+
+/* Light Theme */
+.theme-light .roadmap-node {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.theme-light .roadmap-node:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.theme-light .node-title {
+  color: #1a1a1a;
+}
+
+.theme-light .expand-icon,
+.theme-light .skills-label,
+.theme-light .prereq-label {
+  color: #6b7280;
+}
+
+.theme-light .complete-checkbox {
+  border-color: #d1d5db;
+}
+
+.theme-light .node-prerequisites {
+  border-top-color: #e5e7eb;
+}
+
+.theme-light .connection-line,
+.theme-light .connection-line::before {
+  background: #d1d5db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .roadmap-node {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .node-title {
+    font-size: 1.2rem;
+  }
+
+  .node-children {
+    margin-left: 1.5rem;
+  }
+
+  .connection-line {
+    left: -1.5rem;
+    width: 1rem;
+  }
+
+  .skills-tags {
+    gap: 0.4rem;
+  }
+
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

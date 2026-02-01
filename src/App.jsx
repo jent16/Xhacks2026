@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import jobData from './jobs.json';
 import sfuData from './courses.json';
+import CareerRoadmap from './CareerRoadmap';
 import './App.css';
 
 function App() {
@@ -269,6 +270,11 @@ function App() {
             </div>
           )}
         </footer>
+
+        {/* Career Roadmaps Section */}
+        <div style={{ marginTop: '4rem' }}>
+          <CareerRoadmap />
+        </div>
       </main>
     </div>
   );
