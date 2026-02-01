@@ -1,30 +1,93 @@
-[
-  {
-    "year": 2016,
-    "title": "Web Developer Intern",
-    "description": "Looking for a rockstar to build websites using jQuery and PHP. Must know Photoshop.",
-    "skills": ["jQuery", "PHP", "HTML/CSS", "Photoshop"],
-    "popularity": 40
+{
+  "Full Stack Developer": {
+    "2016": ["PHP", "jQuery", "MySQL", "HTML/CSS", "Bootstrap"],
+    "2017": ["JavaScript ES6", "Node.js", "AngularJS", "MongoDB"],
+    "2018": ["React", "Express", "Redux", "SASS", "Git"],
+    "2019": ["TypeScript", "Next.js", "GraphQL", "Docker"],
+    "2020": ["React Hooks", "PostgreSQL", "AWS Basics", "Serverless"],
+    "2021": ["Tailwind CSS", "Prisma", "Vite", "Firebase"],
+    "2022": ["Next.js 13", "tRPC", "Zustand", "Playwright"],
+    "2023": ["OpenAI API", "Vector DBs", "LangChain", "App Router"],
+    "2024": ["FastAPI", "Python", "RAG Patterns", "Vercel AI SDK"],
+    "2025": ["Agentic Workflows", "Rust", "LLMOps", "Distributed Systems"],
+    "2026": ["Autonomous AI Agents", "WebAssembly", "Edge Computing", "Rust"]
   },
-  {
-    "year": 2019,
-    "title": "Frontend React Developer",
-    "description": "Join our startup! We need someone who understands React class components and Redux.",
-    "skills": ["React", "Redux", "SASS", "Webpack"],
-    "popularity": 65
+  "AI/ML Engineer": {
+    "2016": ["Python", "Scikit-Learn", "R", "Linear Algebra"],
+    "2017": ["TensorFlow", "Keras", "Neural Networks", "Pandas"],
+    "2018": ["PyTorch", "NLP", "Computer Vision", "Jupyter"],
+    "2019": ["Deep Learning", "Spark", "Data Engineering", "SQL"],
+    "2020": ["Transformers", "MLOps", "MLflow", "Cloud AI"],
+    "2021": ["GPT-3 Basics", "Fine-tuning", "HuggingFace", "Streamlit"],
+    "2022": ["Stable Diffusion", "RLHF", "Vector Embeddings", "NumPy"],
+    "2023": ["Large Language Models", "Prompt Engineering", "Pinecone"],
+    "2024": ["Agentic RAG", "LlamaIndex", "Model Quantization"],
+    "2025": ["Multi-modal AI", "Synthetic Data", "Small Language Models"],
+    "2026": ["Physical AI", "Neuro-Symbolic AI", "Real-time Inference"]
   },
-  {
-    "year": 2022,
-    "title": "Full Stack Engineer",
-    "description": "Remote role. TypeScript and Node.js required. Experience with AWS is a plus.",
-    "skills": ["TypeScript", "Node.js", "AWS", "React Hooks"],
-    "popularity": 80
+  "Data Analyst": {
+    "2016": ["Excel", "SQL", "Statistics", "SAS"],
+    "2017": ["Tableau", "R", "Matplotlib", "Data Cleaning"],
+    "2018": ["Power BI", "Python", "Pandas", "Hypothesis Testing"],
+    "2019": ["SQL Server", "Google Analytics", "BigQuery"],
+    "2020": ["Data Storytelling", "Seaborn", "Cloud Data Warehouses"],
+    "2021": ["Snowflake", "dbt", "Looker", "Advanced SQL"],
+    "2022": ["Python for Data Science", "Automation", "Predictive Analytics"],
+    "2023": ["AI Data Assistants", "Exploratory Data Analysis", "Databricks"],
+    "2024": ["Generative BI", "Vector Analysis", "Automated ETL"],
+    "2025": ["Real-time Analytics", "Governance", "Insight Automation"],
+    "2026": ["Autonomous Analytics", "Natural Language Querying", "Data Mesh"]
   },
-  {
-    "year": 2026,
-    "title": "AI Interface Engineer",
-    "description": "Build the UI for our LLM agents. Must know Prompt Engineering and Vercel AI SDK.",
-    "skills": ["Next.js", "AI SDK", "Tailwind", "Python"],
-    "popularity": 95
+  "Game Developer": {
+    "2016": ["C++", "C#", "Unity 5", "OpenGL"],
+    "2017": ["Unreal Engine 4", "DirectX 11", "3D Math", "Shaders"],
+    "2018": ["Vulkan", "Mobile Gaming", "Multiplayer Netcode"],
+    "2019": ["Ray Tracing", "Unity ECS", "Blender", "Substance"],
+    "2020": ["DLSS", "Cloud Gaming", "VR/AR (Quest)", "C++17"],
+    "2021": ["Unreal Engine 5", "Nanite", "Lumen", "C# 9.0"],
+    "2022": ["Procedural Generation", "Spatial Audio", "Blueprints"],
+    "2023": ["AI NPCs", "Metaverse Dev", "Chaos Physics"],
+    "2024": ["Generative Assets", "Neural Rendering", "Mixed Reality"],
+    "2025": ["AI-Driven Level Design", "Cross-Platform Engines", "C++23"],
+    "2026": ["Holodeck Simulations", "DirectStorage", "AI Mechanics"]
+  },
+  "Mobile Developer": {
+    "2016": ["Objective-C", "Java", "Swift 2", "XML"],
+    "2017": ["Swift 3", "Android Studio", "React Native (early)"],
+    "2018": ["Kotlin", "SwiftUI (intro)", "Flutter (early)"],
+    "2019": ["Dart", "Combine Framework", "GraphQL for Mobile"],
+    "2020": ["Jetpack Compose", "SwiftUI", "Firebase Auth"],
+    "2021": ["Cross-platform Performance", "MVI Architecture"],
+    "2022": ["Bluetooth LE", "ARKit", "Jetpack Glance"],
+    "2023": ["Mobile AI Models", "Super Apps", "Dynamic Islands"],
+    "2024": ["Spatial Computing", "Kotlin Multiplatform", "On-device LLMs"],
+    "2025": ["Zero-UI Apps", "Neural Engine Optimization", "PWA Evolution"],
+    "2026": ["Foldable UX", "AI Agent Interfaces", "6G Optimization"]
+  },
+  "DevOps Engineer": {
+    "2016": ["Jenkins", "Vagrant", "Linux", "Bash"],
+    "2017": ["Ansible", "Puppet", "Docker (basics)", "Nagios"],
+    "2018": ["Kubernetes", "AWS", "Terraform", "CI/CD"],
+    "2019": ["Prometheus", "Helm", "Azure", "GitOps"],
+    "2020": ["Istio", "Serverless Ops", "GitHub Actions"],
+    "2021": ["Terraform Cloud", "ArgoCD", "Observability"],
+    "2022": ["Cloud-Native Security", "eBPF", "FinOps"],
+    "2023": ["Platform Engineering", "AIOps", "Supply Chain Security"],
+    "2024": ["Internal Developer Portals", "Infrastructure AI"],
+    "2025": ["Autonomous Scaling", "Self-healing Systems", "GreenOps"],
+    "2026": ["Post-Quantum Security", "Cognitive DevOps Agents", "Edge Ops"]
+  },
+  "Cybersecurity Analyst": {
+    "2016": ["Firewalls", "Wireshark", "Metasploit", "Nmap"],
+    "2017": ["Penetration Testing", "IDS/IPS", "Ethical Hacking"],
+    "2018": ["Cloud Security", "SIEM", "Incident Response"],
+    "2019": ["Zero Trust", "EDR", "Identity Management"],
+    "2020": ["DevSecOps", "WAF", "SOAR", "Compliance"],
+    "2021": ["SASE", "Extended Detection (XDR)", "Container Security"],
+    "2022": ["API Security", "Ransomware Defense", "Threat Hunting"],
+    "2023": ["AI Threat Intelligence", "Supply Chain Risk", "SBOM"],
+    "2024": ["Generative AI Security", "Deepfake Detection", "Automated IR"],
+    "2025": ["Quantum-Resistant Crypto", "AI Red Teaming", "Identity Proofing"],
+    "2026": ["Autonomous Defense Systems", "Algorithmic Governance", "Full Mesh Security"]
   }
-]
+}

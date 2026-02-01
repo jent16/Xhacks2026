@@ -1,116 +1,148 @@
-import { useState } from 'react'
-import './App.css'
-import jobData from './jobs.json'
-import sfuData from './sfu_courses.json' // <--- New Import!
-import { Bar } from 'react-chartjs-2'
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js'
-
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
+import { useState } from 'react';
+import jobData from './jobs.json';
+import sfuData from './courses.json';
+import './App.css';
 
 function App() {
-  const [year, setYear] = useState(2026)
+  const [role, setRole] = useState("Full Stack Developer");
+  const [year1, setYear1] = useState(2016);
+  const [year2, setYear2] = useState(2026);
 
-  // 1. Get Job Data for this year
-  const currentJob = jobData.reduce((prev, curr) => 
-    Math.abs(curr.year - year) < Math.abs(prev.year - year) ? curr : prev
+  const roles = Object.keys(jobData);
+  const years = Array.from({ length: 11 }, (_, i) => 2016 + i);
+
+  // Logic to find all SFU skills taught in a specific year
+  const getSFUSkills = (year) => {
+    let allSkills = [];
+    Object.keys(sfuData).forEach(cat => {
+      const sfuYear = Object.keys(sfuData[cat]).reverse().find(y => y <= year) || 2016;
+      const courses = sfuData[cat][sfuYear]?.courses_and_skills || [];
+      courses.forEach(c => allSkills.push(...c.skills_taught));
+    });
+    return [...new Set(allSkills)];
+  };
+
+  // Logic for Course Recommendations
+  const getRecommendedCourses = (missingSkillsList) => {
+    const recommendations = [];
+    Object.keys(sfuData).forEach(cat => {
+      const sfuYear = Object.keys(sfuData[cat]).reverse().find(y => y <= year2) || 2016;
+      const courses = sfuData[cat][sfuYear]?.courses_and_skills || [];
+      courses.forEach(course => {
+        const hasMatch = course.skills_taught.some(s => 
+          missingSkillsList.some(ms => ms.toLowerCase().includes(s.toLowerCase()))
+        );
+        if (hasMatch) recommendations.push(`${course.course}: ${course.title}`);
+      });
+    });
+    return [...new Set(recommendations)].slice(0, 3);
+  };
+
+  const jobSkills1 = jobData[role][year1] || [];
+  const jobSkills2 = jobData[role][year2] || [];
+  const sfuSkills = getSFUSkills(year2);
+
+  const matchedSkills = jobSkills2.filter(skill => 
+    sfuSkills.some(taught => taught.toLowerCase().includes(skill.toLowerCase()))
+  );
+  const missingSkills = jobSkills2.filter(skill => 
+    !sfuSkills.some(taught => taught.toLowerCase().includes(skill.toLowerCase()))
   );
 
-  // 2. Get SFU Course Data for this year (or closest previous year)
-  // This simulates looking at the course calendar for that year
-  const currentSFU = sfuData.reduce((prev, curr) => 
-    Math.abs(curr.year - year) < Math.abs(prev.year - year) ? curr : prev
-  );
-
-  // 3. THE LOGIC: Compare Job Skills vs. SFU Topics
-  // We check if the skills required by the job exist in ANY SFU course topics for that year
-  const missingSkills = currentJob.skills.filter(skill => {
-    // Check if this skill is taught in ANY of the courses
-    const isTaught = currentSFU.courses.some(course => 
-      course.topics.includes(skill)
-    );
-    return !isTaught; // If NOT taught, it's a "Missing Skill"
-  });
-
-  // Calculate the "Gap Score" (0 = Good, 100 = Bad)
-  const gapScore = Math.round((missingSkills.length / currentJob.skills.length) * 100);
-
-  // Chart Data
-  const chartData = {
-    labels: currentJob.skills,
-    datasets: [
-      {
-        label: `Job Demand in ${currentJob.year} (%)`,
-        data: [90, 80, 70, currentJob.popularity], 
-        backgroundColor: '#3b82f6', 
-      },
-      {
-        label: `Taught at SFU? (100=Yes, 0=No)`,
-        // If skill is missing, bar is 0. If present, bar is 100.
-        data: currentJob.skills.map(skill => missingSkills.includes(skill) ? 0 : 100),
-        backgroundColor: '#ef4444', // Red for SFU
-      }
-    ]
-  }
+  const knownRatio = matchedSkills.length;
+  const missingRatio = missingSkills.length;
+  const matchPercentage = jobSkills2.length > 0 ? Math.round((knownRatio / jobSkills2.length) * 100) : 0;
+  const topCourses = getRecommendedCourses(matchedSkills); // Recommends courses based on target skills
 
   return (
-    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '20px' }}>
-      <h1>Wayback Worklist 🕰️</h1>
+    <div className="layout">
+      <nav className="sidebar">
+        <h2>Wayback Worklist</h2>
+        <div className="input-group">
+          <label>Career Path</label>
+          <select value={role} onChange={(e) => setRole(e.target.value)}>
+            {roles.map(r => <option key={r} value={r}>{r}</option>)}
+          </select>
+        </div>
+        <div className="input-group">
+          <label>Starting Point</label>
+          <select value={year1} onChange={(e) => setYear1(Number(e.target.value))}>
+            {years.map(y => <option key={y} value={y}>{y}</option>)}
+          </select>
+        </div>
+        <div className="input-group">
+          <label>Future Horizon</label>
+          <select value={year2} onChange={(e) => setYear2(Number(e.target.value))}>
+            {years.map(y => <option key={y} value={y}>{y}</option>)}
+          </select>
+        </div>
+      </nav>
 
-      {/* TIMELINE SLIDER */}
-      <div style={{ margin: '30px 0', padding: '20px', background: '#222', borderRadius: '15px' }}>
-        <h2 style={{ fontSize: '3rem', margin: 0, color: gapScore > 50 ? '#ef4444' : '#22c55e' }}>
-          {year}
-        </h2>
-        <input 
-          type="range" min="2016" max="2026" value={year} 
-          onChange={(e) => setYear(Number(e.target.value))}
-          style={{ width: '100%', cursor: 'pointer' }}
-        />
-        <p>Gap Score: <strong>{gapScore}%</strong> {gapScore > 50 ? "🚨 (You are on your own!)" : "✅ (SFU Covers this)"}</p>
-      </div>
+      <main className="content">
+        <header>
+          <h1>{role} Roadmap</h1>
+          <p>Analyzing the shift from {year1} to {year2}</p>
+        </header>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', textAlign: 'left' }}>
-        
-        {/* JOB CARD */}
-        <div style={{ padding: '20px', border: '1px solid #444', borderRadius: '10px' }}>
-          <h3>📢 Job: {currentJob.title}</h3>
-          <p>"{currentJob.description}"</p>
-          
-          {/* THE WARNING BOX */}
-          {missingSkills.length > 0 && (
-            <div style={{ backgroundColor: '#450a0a', padding: '10px', borderRadius: '8px', border: '1px solid #ef4444', marginTop: '15px' }}>
-              <strong style={{color: '#ef4444'}}>⚠️ SKILL GAP DETECTED:</strong>
-              <p style={{fontSize: '0.9rem'}}>SFU does not offer courses for:</p>
+        <div className="comparison-container">
+          <section className="year-card">
+            <h3>Standard in {year1}</h3>
+            <ul className="skill-list">
+              {jobSkills1.map(s => <li key={s} className="skill-past">{s}</li>)}
+            </ul>
+          </section>
+
+          <div className="divider">➔</div>
+
+          <section className="year-card">
+            <h3>Demand in {year2}</h3>
+            <ul className="skill-list">
+              {jobSkills2.map(skill => {
+                const taught = sfuSkills.some(s => s.toLowerCase().includes(skill.toLowerCase()));
+                return (
+                  <li key={skill} className={taught ? "skill-match" : "skill-gap"}>
+                    {skill} <span>{taught ? "✅" : "🚨"}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        </div>
+
+        <footer className="analysis-summary">
+          <div className="ratio-dashboard">
+            <div className="ratio-stat">
+              <span className="big-number">{knownRatio}</span>
+              <span className="label">Skills Known</span>
+            </div>
+            <div className="ratio-divider">vs</div>
+            <div className="ratio-stat">
+              <span className="big-number" style={{ color: '#f87171' }}>{missingRatio}</span>
+              <span className="label">Skills Missing</span>
+            </div>
+          </div>
+
+          <div className="progress-container">
+            <div className="progress-bar" style={{ 
+                width: `${matchPercentage}%`,
+                backgroundColor: matchPercentage > 70 ? '#4ade80' : matchPercentage > 40 ? '#f59e0b' : '#f87171'
+            }}>
+              {matchPercentage}% Ready
+            </div>
+          </div>
+
+          {topCourses.length > 0 && (
+            <div className="recommendation-box">
+              <h4>📚 Recommended SFU Courses:</h4>
               <ul>
-                {missingSkills.map(skill => <li key={skill} style={{color: '#fca5a5'}}>{skill}</li>)}
+                {topCourses.map(c => <li key={c}>{c}</li>)}
               </ul>
             </div>
           )}
-        </div>
-
-        {/* CHART */}
-        <div style={{ padding: '20px', border: '1px solid #444', borderRadius: '10px' }}>
-          <Bar data={chartData} />
-          <p style={{fontSize: '0.8rem', textAlign: 'center', marginTop: '10px'}}>
-            Blue = Job Market | <span style={{color: '#ef4444'}}>Red = SFU Curriculum</span>
-          </p>
-        </div>
-      </div>
-
-      {/* COURSE LIST (To prove you used the API data) */}
-      <div style={{ marginTop: '30px', textAlign: 'left', padding: '20px', background: '#111', borderRadius: '10px' }}>
-        <h4>📚 SFU Courses Available in {currentSFU.year}:</h4>
-        <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-          {currentSFU.courses.map(c => (
-            <span key={c.code} style={{ padding: '5px 10px', background: '#333', borderRadius: '20px', fontSize: '0.8rem' }}>
-              {c.code}: {c.title}
-            </span>
-          ))}
-        </div>
-      </div>
-
+        </footer>
+      </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,42 +1,51 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.ratio-dashboard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.ratio-stat {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.big-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #4ade80;
+  line-height: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.ratio-divider {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #475569;
+  text-transform: uppercase;
 }
 
-.card {
-  padding: 2em;
+.recommendation-box {
+  margin-top: 20px;
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #6366f1;
 }
 
-.read-the-docs {
-  color: #888;
+.recommendation-box h4 {
+  margin-bottom: 10px;
+  color: #6366f1;
+  font-size: 0.9rem;
+}
+
+.recommendation-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recommendation-box li {
+  font-size: 0.85rem;
+  color: #f1f5f9;
+  margin-bottom: 5px;
 }
