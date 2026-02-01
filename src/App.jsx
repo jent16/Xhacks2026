@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import jobData from './jobs.json';
 import sfuData from './courses.json';
 import './App.css';
@@ -129,27 +129,66 @@ function App() {
   const matchPercentage = jobSkills2.length > 0 ? Math.round((knownRatio / jobSkills2.length) * 100) : 0;
   const topCourses = getRecommendedCourses(matchedSkills);
 
+  // Theme state with persistence
+  const [theme, setTheme] = useState(() => {
+    try { return localStorage.getItem('theme') || (window.matchMedia?.('(prefers-color-scheme: light)').matches ? 'light' : 'dark'); } catch { return 'dark'; }
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('theme-light', theme === 'light');
+    try { localStorage.setItem('theme', theme); } catch {}
+  }, [theme]);
+
+  // Parallax/tilt effect for cards
+  const cardsRef = useRef([]);
+  const handleMouseMove = (e) => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    cardsRef.current.forEach(card => {
+      if (!card) return;
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      const rotY = x * 8;
+      const rotX = y * -6;
+      card.style.transform = `perspective(1200px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(8px)`;
+    });
+  };
+
+  const handleMouseLeave = () => {
+    cardsRef.current.forEach(card => {
+      if (card) card.style.transform = '';
+    });
+  };
+
   return (
-    <div className="layout">
+    <div className="layout" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
       <nav className="sidebar">
         <h2>Wayback Worklist 🕰️</h2>
-        <div className="input-group">
-          <label>Career Path</label>
-          <select value={role} onChange={(e) => setRole(e.target.value)}>
-            {roles.map(r => <option key={r} value={r}>{r}</option>)}
-          </select>
+        <div>
+          <div className="input-group">
+            <label>Career Path</label>
+            <select value={role} onChange={(e) => setRole(e.target.value)}>
+              {roles.map(r => <option key={r} value={r}>{r}</option>)}
+            </select>
+          </div>
+          <div className="input-group">
+            <label>Starting Point</label>
+            <select value={year1} onChange={(e) => setYear1(Number(e.target.value))}>
+              {years.map(y => <option key={y} value={y}>{y}</option>)}
+            </select>
+          </div>
+          <div className="input-group">
+            <label>Future Horizon</label>
+            <select value={year2} onChange={(e) => setYear2(Number(e.target.value))}>
+              {years.map(y => <option key={y} value={y}>{y}</option>)}
+            </select>
+          </div>
         </div>
-        <div className="input-group">
-          <label>Starting Point</label>
-          <select value={year1} onChange={(e) => setYear1(Number(e.target.value))}>
-            {years.map(y => <option key={y} value={y}>{y}</option>)}
-          </select>
-        </div>
-        <div className="input-group">
-          <label>Future Horizon</label>
-          <select value={year2} onChange={(e) => setYear2(Number(e.target.value))}>
-            {years.map(y => <option key={y} value={y}>{y}</option>)}
-          </select>
+        <div className="theme-toggle">
+          <label className="label">Theme</label>
+          <button onClick={() => setTheme(t => t === 'light' ? 'dark' : 'light')}>
+            {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+          </button>
         </div>
       </nav>
 
@@ -160,16 +199,14 @@ function App() {
         </header>
 
         <div className="comparison-container">
-          <section className="year-card">
+          <section className="year-card" ref={(el) => { if (el) cardsRef.current[0] = el; }}>
             <h3>Standard in {year1}</h3>
             <ul className="skill-list">
               {jobSkills1.map(s => <li key={s} className="skill-past">{s}</li>)}
             </ul>
           </section>
 
-          <div className="divider">➔</div>
-
-          <section className="year-card">
+          <section className="year-card" ref={(el) => { if (el) cardsRef.current[1] = el; }}>
             <h3>Demand in {year2}</h3>
             <ul className="skill-list">
               {jobSkills2.map(skill => {
@@ -205,7 +242,7 @@ function App() {
           <div className="ratio-dashboard">
             <div className="ratio-stat">
               <span className="big-number">{knownRatio}</span>
-              <span className="label">Skills Known</span>
+              <span className="label">Skills Offered</span>
             </div>
             <div className="ratio-divider">vs</div>
             <div className="ratio-stat">
