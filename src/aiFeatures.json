@@ -1,0 +1,158 @@
+{
+  "careerAdvisorResponses": {
+    "greeting": "Hello! I'm your AI Career Advisor. I can help you with career guidance, resume tips, interview prep, and learning strategies. What would you like to know?",
+    "skillGap": "Based on your current profile, you're missing {missingCount} key skills. I recommend focusing on {topMissing} first, as these are in high demand and will significantly improve your qualification percentage.",
+    "trendingAdvice": "The job market is shifting towards {trendingSkill}. This skill is growing at {growthRate}% yearly. Learning it could increase your market value by 25-40%.",
+    "interviewTip": "Pro tip: When asked about your strengths, mention specific projects where you've used your technical skills. Quantify your impact: 'Improved performance by X%' or 'Reduced costs by X hours'.",
+    "careerPath": "Based on your skills, you're well-positioned for roles in {role}. You could also leverage your current skills to transition into {alternativeRole}.",
+    "learningStrategy": "Here's a personalized strategy: 1) Master fundamentals in {fundamental} 2) Build real projects 3) Learn {trending} skills 4) Contribute to open source 5) Document your journey on GitHub."
+  },
+  "resumeSuggestions": [
+    {
+      "title": "Add Skills Section with Proficiency Levels",
+      "description": "Organize technical proficiencies with explicit levels (Beginner, Intermediate, Expert)",
+      "impactRating": "High"
+    },
+    {
+      "title": "Quantify Your Achievements",
+      "description": "Use metrics instead of vague descriptions. Example: 'Increased performance by 40%' instead of 'Improved performance'",
+      "impactRating": "High"
+    },
+    {
+      "title": "Showcase Projects with Links",
+      "description": "Include 2-3 significant projects with GitHub links, technologies used, and measurable impact",
+      "impactRating": "High"
+    },
+    {
+      "title": "Add Relevant Certifications",
+      "description": "List certifications and online courses that validate your technical skills and show continuous learning",
+      "impactRating": "Medium"
+    },
+    {
+      "title": "Optimize for ATS Systems",
+      "description": "Include keywords from job descriptions in your resume to pass Applicant Tracking System filters",
+      "impactRating": "High"
+    }
+  ],
+  "mockInterviewQuestions": {
+    "technical": [
+      {
+        "question": "Explain your most complex project. What technologies did you use and what challenges did you face?",
+        "keywords": ["architecture", "problem-solving", "technologies", "impact"],
+        "tip": "Focus on the problem you solved, not just what you built. Show your thought process."
+      },
+      {
+        "question": "How do you approach learning a new technology or framework?",
+        "keywords": ["learning", "documentation", "practice", "community"],
+        "tip": "Show you're proactive. Mention specific resources and how you apply new knowledge."
+      },
+      {
+        "question": "Tell me about a time you had to debug a complex issue. How did you approach it?",
+        "keywords": ["debugging", "systematic", "testing", "collaboration"],
+        "tip": "Use the STAR method: Situation, Task, Action, Result. Show your analytical thinking."
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Describe a time you had to work with a difficult team member.",
+        "keywords": ["communication", "empathy", "resolution", "growth"],
+        "tip": "Show emotional intelligence. Focus on what you learned and how you grew."
+      },
+      {
+        "question": "Tell me about a project that failed. What did you learn?",
+        "keywords": ["failure", "learning", "resilience", "improvement"],
+        "tip": "Be honest but constructive. Show growth mindset."
+      },
+      {
+        "question": "How do you handle tight deadlines and pressure?",
+        "keywords": ["prioritization", "stress-management", "planning", "communication"],
+        "tip": "Give a concrete example. Show you stay calm and communicate well."
+      }
+    ]
+  },
+  "dailyTasks": {
+    "difficulty": ["Beginner", "Intermediate", "Advanced"],
+    "taskTypes": [
+      {
+        "type": "Learn a Concept",
+        "description": "Spend 30 minutes learning about {topic}",
+        "effort": 30,
+        "points": 50
+      },
+      {
+        "type": "Build a Mini Project",
+        "description": "Create a small project using {technology}",
+        "effort": 90,
+        "points": 200
+      },
+      {
+        "type": "Code Challenge",
+        "description": "Solve 3 coding problems on {platform} involving {algorithm}",
+        "effort": 45,
+        "points": 100
+      },
+      {
+        "type": "Documentation Review",
+        "description": "Read official docs for {technology} and summarize key concepts",
+        "effort": 30,
+        "points": 50
+      },
+      {
+        "type": "Open Source Contribution",
+        "description": "Find and work on a GitHub issue in {project}",
+        "effort": 60,
+        "points": 150
+      },
+      {
+        "type": "Interview Prep",
+        "description": "Practice answering {interviewType} interview questions",
+        "effort": 45,
+        "points": 100
+      }
+    ]
+  },
+  "learningPathTemplate": {
+    "phases": [
+      {
+        "name": "Foundation",
+        "duration": "2-3 weeks",
+        "topics": [
+          "Core concepts and principles",
+          "Basic syntax and fundamentals",
+          "Official documentation overview"
+        ],
+        "resources": ["Official tutorials", "Beginner courses", "Documentation"]
+      },
+      {
+        "name": "Practical Skills",
+        "duration": "3-4 weeks",
+        "topics": [
+          "Building real projects",
+          "Best practices and patterns",
+          "Common use cases"
+        ],
+        "resources": ["Project-based courses", "GitHub examples", "Blog posts"]
+      },
+      {
+        "name": "Advanced Topics",
+        "duration": "2-3 weeks",
+        "topics": [
+          "Advanced patterns and optimization",
+          "Performance tuning",
+          "Architecture decisions"
+        ],
+        "resources": ["Advanced courses", "Research papers", "Expert blogs"]
+      },
+      {
+        "name": "Mastery",
+        "duration": "Ongoing",
+        "topics": [
+          "Contributing to open source",
+          "Teaching others",
+          "Staying current with trends"
+        ],
+        "resources": ["GitHub contributions", "Technical writing", "Community"]
+      }
+    ]
+  }
+}

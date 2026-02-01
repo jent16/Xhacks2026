@@ -1,0 +1,93 @@
+{
+  "skillDemand": {
+    "Python": 95,
+    "JavaScript": 92,
+    "TypeScript": 88,
+    "React": 85,
+    "Node.js": 80,
+    "AWS": 78,
+    "Docker": 75,
+    "Kubernetes": 70,
+    "PostgreSQL": 72,
+    "MongoDB": 65,
+    "GraphQL": 62,
+    "Vue": 48,
+    "Angular": 52,
+    "Java": 68,
+    "C++": 55,
+    "Go": 60,
+    "Rust": 58,
+    "Next.js": 80,
+    "FastAPI": 72,
+    "TensorFlow": 65,
+    "PyTorch": 68,
+    "LangChain": 75,
+    "Vector DB": 70,
+    "Prompt Engineering": 85,
+    "LLM": 88,
+    "Redis": 64,
+    "SQL": 90,
+    "Git": 98,
+    "Terraform": 68,
+    "CI/CD": 82,
+    "Tailwind": 75,
+    "Vite": 60
+  },
+  "salaryByLocation": {
+    "San Francisco": { "entry": 120000, "mid": 180000, "senior": 250000 },
+    "New York": { "entry": 115000, "mid": 170000, "senior": 240000 },
+    "Seattle": { "entry": 110000, "mid": 165000, "senior": 235000 },
+    "Austin": { "entry": 95000, "mid": 145000, "senior": 200000 },
+    "Toronto": { "entry": 80000, "mid": 130000, "senior": 180000 },
+    "Vancouver": { "entry": 75000, "mid": 120000, "senior": 165000 },
+    "Remote": { "entry": 100000, "mid": 155000, "senior": 220000}
+  },
+  "trendingSkills": [
+    { "skill": "Prompt Engineering", "growth": 450, "demand": "Critical" },
+    { "skill": "LangChain", "growth": 380, "demand": "Very High" },
+    { "skill": "Vector Databases", "growth": 320, "demand": "Very High" },
+    { "skill": "LLM Fine-tuning", "growth": 290, "demand": "High" },
+    { "skill": "RAG Patterns", "growth": 270, "demand": "High" },
+    { "skill": "AI Agents", "growth": 260, "demand": "High" },
+    { "skill": "Rust", "growth": 185, "demand": "High" },
+    { "skill": "WebAssembly", "growth": 175, "demand": "Medium-High" }
+  ],
+  "jobPostingAnalysis": {
+    "Full Stack Developer": {
+      "averageOpenings": 5420,
+      "topSkills": ["JavaScript", "React", "Node.js", "TypeScript", "SQL", "Docker"],
+      "avgSalary": 155000,
+      "growthRate": 12
+    },
+    "AI/ML Engineer": {
+      "averageOpenings": 3210,
+      "topSkills": ["Python", "PyTorch", "TensorFlow", "Machine Learning", "Deep Learning", "SQL"],
+      "avgSalary": 180000,
+      "growthRate": 45
+    },
+    "Data Analyst": {
+      "averageOpenings": 2840,
+      "topSkills": ["SQL", "Python", "Tableau", "Power BI", "Excel", "Statistics"],
+      "avgSalary": 95000,
+      "growthRate": 18
+    },
+    "Game Developer": {
+      "averageOpenings": 1650,
+      "topSkills": ["C++", "C#", "Unity", "Unreal Engine", "3D Math", "HLSL"],
+      "avgSalary": 140000,
+      "growthRate": 8
+    },
+    "DevOps Engineer": {
+      "averageOpenings": 2100,
+      "topSkills": ["Docker", "Kubernetes", "AWS", "Terraform", "CI/CD", "Linux"],
+      "avgSalary": 165000,
+      "growthRate": 22
+    },
+    "Cloud Architect": {
+      "averageOpenings": 1840,
+      "topSkills": ["AWS", "Azure", "Terraform", "Kubernetes", "System Design", "Security"],
+      "avgSalary": 210000,
+      "growthRate": 35
+    }
+  }
+}

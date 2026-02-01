@@ -163,7 +163,7 @@ function App() {
   return (
     <div className="layout" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
       <nav className="sidebar">
-        <h2>Wayback Worklist 🕰️</h2>
+        <h2>Delta</h2>
         <div>
           <div className="input-group">
             <label>Career Path</label>
